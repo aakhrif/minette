@@ -1,0 +1,14 @@
+<?php
+require __DIR__ . '/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use App\Console\MakePresenterCommand;
+
+
+// Symfony Console Application
+$application = new Application('My Nette App', '1.0.0');
+
+$application->addCommand(new MakePresenterCommand("make:Presenter"));
+
+// Hier kannst du Commands registrieren, z.B. Presenter-Generator
+$application->run();

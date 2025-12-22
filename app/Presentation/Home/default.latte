@@ -1,0 +1,10 @@
+{block title}Home{/block}
+
+{block content}
+  {include '_hero.latte'}
+	
+	<div id="products">
+		<h2>Features Products</h2>
+		{include '../Product/_productGrid.latte', products => $products}
+	</div>
+{/block}

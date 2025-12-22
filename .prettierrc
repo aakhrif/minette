@@ -1,0 +1,10 @@
+{
+  "overrides": [
+    {
+      "files": ["*.latte", "*.latte.html"],
+      "options": {
+        "parser": "html"
+      }
+    }
+  ]
+}

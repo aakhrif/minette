@@ -1,0 +1,29 @@
+# Nette Framework
+/log
+/temp
+/vendor
+/www/webtemp
+/www/foto
+
+# Composer
+composer.phar
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System
+.DS_Store
+Thumbs.db
+
+# Umgebungsdateien
+.env
+.env.local
+.env.*.local
+
+# SQLite (falls verwendet)
+*.sqlite
+*.db
+/database/*.sqlite

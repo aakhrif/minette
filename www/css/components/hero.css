@@ -35,6 +35,11 @@
   transition: background-color 0.3s ease;
 }
 
+.btn-primary:focus {
+  outline: 3px solid #ff3b2e;
+  outline-offset: 2px;
+}
+
 .btn-primary:hover {
   background-color: #ff3b2e;
 }

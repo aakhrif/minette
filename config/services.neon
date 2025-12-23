@@ -1,6 +1,8 @@
 services:
 	- App\Core\RouterFactory::createRouter
 	- App\Model\ProductService
+	- App\Model\UserService
+	- App\Presentation\BasePresenter
 
 
 search:

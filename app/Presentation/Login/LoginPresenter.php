@@ -1,14 +1,19 @@
 <?php
 
-use App\Model\UserService;
-use Nette\Application\UI\Presenter;
+declare(strict_types=1);
 
-final class LoginPresenter extends Presenter
+namespace App\Presentation\Login;
+
+use App\Model\UserService;
+use App\Presentation\BasePresenter;
+
+final class LoginPresenter extends BasePresenter
 {
   private UserService $userService;
 
   public function __construct(UserService $userService)
   {
+    parent::__construct($userService);
     $this->userService = $userService;
   }
 

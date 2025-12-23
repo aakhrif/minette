@@ -5,14 +5,15 @@ declare(strict_types=1);
 namespace App\Presentation\Home;
 
 use App\Model\ProductService;
-use Nette;
+use App\Model\UserService;
+use App\Presentation\BasePresenter;
 
 
-final class HomePresenter extends Nette\Application\UI\Presenter
+final class HomePresenter extends BasePresenter
 {
-  public function __construct(private ProductService $productService)
+  public function __construct(private ProductService $productService, private UserService $userService)
   {
-    parent::__construct();
+    parent::__construct($userService);
   }
 
   public function renderDefault(): void

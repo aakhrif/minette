@@ -1,0 +1,23 @@
+<header class="site-header">
+  <!-- Header / Navbar -->
+  <div class="logo">
+    <a href="/">Minette</a>
+  </div>
+  <nav class="main-nav">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="#featured-products">Products</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="auth-area">
+    {ifset user}
+      <span>Welcome, {$user->name}</span>
+      <a href="/logout" class="btn-secondary">Logout</a>
+    {else} 
+      <a href="/login" class="btn-primary">Login</a>
+      <a href="/register" class="btn-secondary">Register</a>
+    {/ifset}
+  </div>
+</header>

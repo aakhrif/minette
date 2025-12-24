@@ -3,27 +3,35 @@
 namespace App\Model;
 
 use Nette\Http\Session;
+use Nette\Database\Explorer;
 
 class UserService
 {
-  private Session $session;
   private const SESSION_SECTION = 'auth';
 
-  public function __construct(Session $session)
-  {
-    $this->session = $session;
-  }
+  public function __construct(
+    private Explorer $database,
+    private Session $session
+  ) {}
 
-  public function login(string $username, string $password): bool
+  public function login(string $email, string $password): bool
   {
-    if ($username === 'test' && $password === '1234') {
-      $section = $this->session->getSection(self::SESSION_SECTION);
-      $section->userId = 1;
-      $section->name = 'Test User';
+    $user = $this->database
+      ->table('users')
+      ->where('email', $email)
+      ->fetch();
 
-      return true;
+    if (!$user) {
+      return false;
     }
-    return false;
+
+    if (!password_verify($password, $user->password_hash)) {
+      return false;
+    }
+
+    $this->session->getSection(self::SESSION_SECTION)->userId = $user->id;
+
+    return true;
   }
 
   public function logout(): void
@@ -39,10 +47,9 @@ class UserService
       return null;
     }
 
-    return (object) [
-      'id' => $section->userId,
-      'name' => $section->name
-    ];
+    return $this->database
+      ->table('users')
+      ->get($section->userId);
   }
 
   public function isLoggedIn(): bool

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+	{include './Components/flashToaster.latte'}
 	{include 'header.latte'}
 	<main>
 	{include content}

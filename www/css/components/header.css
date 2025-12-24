@@ -52,3 +52,15 @@
   text-decoration: none;
   font-weight: 500;
 }
+
+#login-form {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding:10px;
+  flex-direction: column;
+  justify-content: end;
+  flex: 0 0 1;
+  flex-wrap: wrap;
+}

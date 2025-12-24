@@ -33,4 +33,13 @@ final class LoginPresenter extends BasePresenter
       }
     }
   }
+
+  public function actionLogout(): void
+  {
+    $this->userService->logout();
+
+    $this->flashMessage('Du wurdest ausgeloggt.', 'success');
+    $this->redirect('Home:default');
+    $this->terminate();
+  }
 }

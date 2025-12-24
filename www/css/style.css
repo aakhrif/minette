@@ -45,3 +45,11 @@
   color: #ff6f61;
   font-weight: bold;
 }
+
+/** fields  */
+input {
+  padding: 14px 16px;
+  width: 330px;
+  border-radius: 6px;
+  border: 1px solid #dddfe2;
+}

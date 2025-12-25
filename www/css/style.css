@@ -73,6 +73,26 @@ input {
   animation: slideIn .3s ease;
 }
 
+.flash {
+  opacity: 1;
+  transition: opacity .3s ease, transform .3s ease;
+}
+
+.flash.hide {
+  opacity: 0;
+  transform: translateX(20px);
+  pointer-events: none;
+}
+
+.flash-close {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.25rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
 .flash.success {
   background: #2ecc71;
 }

@@ -4,11 +4,26 @@
 		"nette-forms": "^3.3"
 	},
 	"devDependencies": {
-		"@nette/vite-plugin": "^1.0.1",
-		"vite": "^6.3.5"
+		"@nette/vite-plugin": "^1.0.2",
+		"vite": "^6.4.1"
 	},
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build"
-	}
+	},
+	"name": "minette",
+	"version": "1.0.0",
+	"description": "Nette Web Project =================",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/aakhrif/minette.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/aakhrif/minette/issues"
+	},
+	"homepage": "https://github.com/aakhrif/minette#readme"
 }

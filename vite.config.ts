@@ -1,18 +1,18 @@
-import { defineConfig } from 'vite';
-import nette from '@nette/vite-plugin';
+import { defineConfig } from "vite";
+import nette from "@nette/vite-plugin";
 
 export default defineConfig({
-	plugins: [
-		nette({
-			entry: 'main.js',
-		}),
-	],
+  plugins: [
+    nette({
+      entry: "main.js",
+    }),
+  ],
 
-	build: {
-		emptyOutDir: true,
-	},
+  build: {
+    emptyOutDir: true,
+  },
 
-	css: {
-		devSourcemap: true,
-	},
+  css: {
+    devSourcemap: true,
+  },
 });

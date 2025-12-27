@@ -5,3 +5,11 @@ CREATE TABLE users (
     name VARCHAR(100) NOT NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    name VARCHAR(255), 
+    price DECIMAL(13,4), 
+    image VARCHAR(255),
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);

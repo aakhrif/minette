@@ -33,3 +33,8 @@ di:
 	export:
 		parameters: no
 		tags: no
+
+tracy:
+	editor: phpstorm
+	strictMode: yes
+

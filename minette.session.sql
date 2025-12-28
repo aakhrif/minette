@@ -13,3 +13,6 @@ CREATE TABLE products (
     image VARCHAR(255),
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
+
+ALTER TABLE users ADD role ENUM('user','admin') NOT NULL DEFAULT 'user';
+

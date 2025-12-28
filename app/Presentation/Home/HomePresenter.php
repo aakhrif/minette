@@ -18,6 +18,6 @@ final class HomePresenter extends BasePresenter
 
   public function renderDefault(): void
   {
-    $this->template->products = $this->productService->getAll();
+    //$this->template->products = $this->productService->getAll();
   }
 }

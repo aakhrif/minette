@@ -1,0 +1,21 @@
+{block title}Produkt erstellen{/block} 
+
+{block content}
+<h2>Neues Produkt</h2>
+
+{if $currentUser}
+  <form method="post">
+    <div>
+        <label>Produktname</label>
+        <input type="text" name="name" required>
+    </div>
+
+    <div>
+        <label>Preis</label>
+        <input type="number" step="0.01" name="price" required>
+    </div>
+
+    <button type="submit">Produkt erstellen</button>
+</form>
+{/if}
+{/block} 

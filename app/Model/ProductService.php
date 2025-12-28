@@ -48,4 +48,14 @@ final class ProductService
       ->order('created_at DESC')
       ->page($page, $perPage);
   }
+
+  public function createProduct(array $data, int $userId): void
+  {
+    $this->database->table('products')->insert([
+      'name' => $data['name'],
+      'price' => $data['price'],
+      'user_id' => $userId,
+      'is_active' => 1
+    ]);
+  }
 }

@@ -5,6 +5,9 @@
 	
 	<div id="products">
 		<h2>Features Products</h2>
-		{include '../Product/_productGrid.latte', products => $products}
+  {if $currentUser}
+    <a n:href="Product:create" class="btn-primary">Produkt erstellen</a>
+	{/if}
+		{* {include '../Product/_productGrid.latte', products => $products} *}
 	</div>
 {/block}
